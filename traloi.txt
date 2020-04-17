@@ -1,0 +1,29 @@
+câu 4:Cho biết các phương thức vòng đời được gọi khi ứng dụng đang chạy và người sử
+dụng bấm vào nút back sau đó mở lại ứng dụng.
+
+khi nhấn nút back các phương thức lần lượt được gọi:
+onPause 
+onStop 
+onDestroy 
+khi mở lại các phương thức lần lượt được gọi:
+onCreate 
+onStart 
+onResume 
+
+Câu 5: Cho biết các phương thức vòng đời được gọi khi ứng dụng đang chạy và người sử
+dụng bấm vào nút home và sau đó mở lại ứng dụng.
+
+khi bấm nút home các phương thức lần lượt được gọi:
+onPause 
+onStop 
+khi mở lại các phương thức lần lượt được gọi:
+onReStart 
+onStart 
+onResume 
+
+câu 6:Nếu cần lưu thông tin của ứng dụng để khôi phục lại trạng thái hiển thị của ứng dụng
+khi chạy lại ứng dụng thì cần phải thực hiện trong phương thức vòng đời nào? vì sao?
+
+cần thực hiện trong phương thức vòng đời:onPause()
+Vì onPause() là phương thức duy nhất đảm bảo được gọi trước khi tiến trình bị hủy(killed) - onStop() và onDestroy() có thể không được gọi
+->do đó ta nên dùng onPause() để lưu dữ liệu cần giữ lại
